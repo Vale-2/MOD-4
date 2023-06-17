@@ -4,3 +4,4 @@ def pal(str1):
         print(True)
     else:
         print(False)
+pal(str2)
