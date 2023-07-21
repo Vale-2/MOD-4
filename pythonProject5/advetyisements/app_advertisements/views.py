@@ -7,3 +7,14 @@ def index(request):
 
 def top_sellers(request):
     return render(request, 'top-sellers.html')
+
+def profile(request):
+    return render(request, 'profile.html')
+def advertisement_post(request):
+    return render(request, 'advertisement-post.html')
+
+def register(request):
+    return render(request, 'register.html')
+
+def login_post(request):
+    return render(request, 'login.html')
