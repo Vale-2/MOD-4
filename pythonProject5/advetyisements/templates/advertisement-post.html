@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/fontello.css">
-  <title>Advertisement-post</title>
-</head>
+{% load static %}
 
+{% block title %} Разместить объявление {% endblock %}
+
+{% block content %}
 <body>
 
 
@@ -95,8 +89,9 @@
       <div class="row mb-3">
         <div class="col">
           <div class="offset-4 w-25">
-            <input type="checkbox" class="form-check-input">
-            <label class="form-check-label">Auction</label>
+            <div class="col-6">
+            {{form.as_p}}
+            </div>
           </div>
         </div>
       </div>
