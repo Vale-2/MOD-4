@@ -1,5 +1,5 @@
 """
-URL configuration for advetyisements project.
+URL configuration for advertisements project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -19,11 +19,12 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app_advertisements.urls')),
-    path('lesson_4', include('app_lesson_4.urls')),
+    path('myauth', include('app_auth.urls')),
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root = settings)
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
